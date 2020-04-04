@@ -1,5 +1,5 @@
 {
-  "name": "litmusic-lavalink",
+  "name": "heroku-lavalink",
   "version": "1.0.0",
   "description": "",
   "main": "bootstrap.js",
