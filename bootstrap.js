@@ -1,10 +1,4 @@
-//const http = require('http');
 const fs = require('fs')
-/*http.createServer(function (req, res) {
-	res.write('bruh');
-	res.end();
-}).listen(process.env.PORT);
-*/
 
 let application = fs.readFileSync('./application.yml','utf8')
 application = application.replace('DYNAMICPORT-CHANGEME',process.env.PORT)
