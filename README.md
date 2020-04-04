@@ -1,2 +1,2 @@
 # heroku-lavalink
-Deply lavalink on heroku.
+Easily deploy lavalink on heroku.
