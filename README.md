@@ -1,6 +1,6 @@
 # heroku-lavalink
-Easily deploy lavalink on heroku.
-This is a very elementary approach.
+Easily deploy a lavalink server on heroku.
+This is a very elementary and barebones approach, but reliable nonetheless.
 
 1. Download files (Clone or download->Download ZIP) & latest lavalink jar from https://github.com/Frederikam/Lavalink/releases
 2. Extract files info an empty directory and drag the Lavalink.jar you just downloaded into the same directory.
