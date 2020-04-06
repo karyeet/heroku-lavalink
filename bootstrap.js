@@ -15,12 +15,15 @@ fs.writeFileSync('./application.yml', application)
 const spawn = require('child_process').spawn;
 const child = spawn('java', ['-jar', 'Lavalink.jar'])
 
+child.stdout.setEncoding('utf8')
+child.stderr.setEncoding('utf8')
+
 child.stdout.on('data',(data)=>{
-	console.log(`stdout: ${data}`);
+	console.log(data);
 });
 
 child.stderr.on('data', (data) => {
-  console.error(`stderr: ${data}`);
+  console.error(data);
 });
 
 child.on('error',(error)=>{
