@@ -1,7 +1,7 @@
 
 const fs = require('fs')
 const http = require('http')
-/*let application = fs.readFileSync('./application.yml', 'utf8')
+let application = fs.readFileSync('./application.yml', 'utf8')
 
 if (process.env.PORT) {
     application = application.replace('DYNAMICPORT', process.env.PORT)
@@ -11,7 +11,7 @@ if (process.env.PASS) {
     application = application.replace('youshallnotpass', process.env.PASS)
 }
 fs.writeFileSync('./application.yml', application)
-*/
+
 const download = function (url, dest, cb) { //modified code from https://stackoverflow.com/a/22907134
     const file = fs.createWriteStream(dest);
     http.get(url, function (response) {
