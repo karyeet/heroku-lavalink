@@ -8,5 +8,6 @@ For automatic download of the Lavalink.jar and a more simple deployment method, 
 3. Follow https://devcenter.heroku.com/articles/git.
 If heroku is unable to automatically configure buildpacks, go to your projects settings on the heroku website and add java and nodejs.
 4. Go to your project settings->config vars on heroku and set a new var called PASS to whatever you want your lavalink password to be.
-After changing PASS you must click the More menu and restart all dynos.
+
+**Note**:After changing PASS you must redeploy or click the More menu and *restart all dynos*.
 
