@@ -29,7 +29,7 @@ const download = function (url, dest, cb) { //modified code from https://stackov
 
 function startLavalink() {
     const spawn = require('child_process').spawn;
-    const child = spawn('java', ['-jar', 'Lavalink.jar'])
+    const child = spawn('java', ['-jar','-xmx 500m, 'Lavalink.jar'])
 
     child.stdout.setEncoding('utf8')
     child.stderr.setEncoding('utf8')
