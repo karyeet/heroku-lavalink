@@ -10,4 +10,5 @@ If heroku is unable to automatically configure buildpacks, go to your projects s
 5. In the same menu, set a new var called *JAVA_TOOL_OPTIONS* and set it to "-XX:+UseContainerSupport -Xmx500m -Xss256k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8" without the "" , this will set ram to max on a free dyno
 
 **Note**:After changing PASS you must redeploy or click the More menu and *restart all dynos*.
-Please understand your lavalink server will eventually run out of memory on a free dyno. I would recommend upgrading or switching to a lighter alternative.
+
+Please understand your lavalink server ***will run out of memory on a free dyno***. I would recommend upgrading or switching to a lighter alternative.
