@@ -12,7 +12,7 @@ Also automatic deploys will restart your server so enable it on your own risk, n
 ### Info 
 Buildpacks should be added automatically, you may modify the `PASS` variable during setup to change the password.
 ### Deploy
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/KareemRS/heroku-lavalink/tree/auto)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TEEN-BOOM/heroku-lavalink/tree/auto)
 
 ## Using Github Deploy: (The hard way but more control)
 1. Create a fork of this repo
