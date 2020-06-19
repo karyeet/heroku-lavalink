@@ -5,16 +5,16 @@ This branch will automatically download the Lavalink.jar, but it may not be late
 
 Current Lavalink release: **v3.3.1**
 
-## Using this button (The easy way)
-##### Note
+##### Note:
 You can enable automatic deploys to update the app when commits are added to the auto branch (see step 5 to 9).
 Also automatic deploys will restart your server so enable it on your own risk, no author is responsible for any damages that may occur due to auto matic deploys! or simply you may check the auto branch for commits and deploy them manually
-### Info 
-Buildpacks should be added automatically, you may modify the `PASS` variable during setup to change the password.
-### Deploy
+
+### One Click Deploy:
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TEEN-BOOM/heroku-lavalink/tree/auto)
 
-## Using Github Deploy: (The hard way but more control)
+Buildpacks should be added automatically, you may modify the `PASS` variable during setup to change the password.
+
+### Github Deploy:
 1. Create a fork of this repo
 2. Navigate to your heroku project @dashboard.heroku.com
 3. Navigate to your project *"Settings"*, click *"Reaveal Config Vars"*, and set a new var called *PASS* to what you want your lavalink password to be.
@@ -25,7 +25,7 @@ Buildpacks should be added automatically, you may modify the `PASS` variable dur
 8. Click *"Connect"* 
 9. Scroll down and find *"Manual Deploy"*, then switch the branch to auto and *"Deploy Branch"*.
 
-### Heroku CLI:
+### Heroku CLI Deploy:
 1. Download files (Clone or download->Download ZIP).
 2. Extract files into an empty directory.
 3. Follow https://devcenter.heroku.com/articles/git.
@@ -37,4 +37,4 @@ If heroku is unable to automatically configure buildpacks, go to your projects s
 1. After changing PASS you must redeploy or click the More menu and *restart all dynos*.
 2. If heroku is unable to automatically configure buildpacks, go to your projects settings on the heroku website and add java and nodejs.
 
-Please understand your lavalink server ***will run out of memory on a free dyno***. I would recommend upgrading or switching to a lighter alternative.
+Please understand your lavalink server ***will run out of memory on a free dyno***. I would recommend upgrading or switching to a lighter alternative. If you do upgrade, you must change -Xmx in the JAVA_TOOL_OPTIONS to your new amount of ram.
