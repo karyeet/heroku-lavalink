@@ -6,8 +6,8 @@ This branch will automatically download the Lavalink.jar, but it may not be late
 Current Lavalink release: **v3.3.1**
 
 ##### Note:
-You can enable automatic deploys to update the app when commits are added to the auto branch (see step 5 to 9).
-Also automatic deploys will restart your server so enable it on your own risk, no author is responsible for any damages that may occur due to automatic deploys! or simply you may check the auto branch for commits and deploy them manually
+You can enable automatic deploys to update the app when commits are added to the auto branch (see step 5 to 9 in Github Deploy).
+Automatic deploys will restart your server so enable them at your own risk, the author is not responsible for any damages that may occur as results of automatic deploys!
 
 ### One Click Deploy:
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TEEN-BOOM/heroku-lavalink/tree/auto)
