@@ -10,7 +10,7 @@ You can enable automatic deploys to update the app when commits are added to the
 Automatic deploys will restart your server so enable them at your own risk, the author is not responsible for any damages that may occur as results of automatic deploys!
 
 ### One Click Deploy:
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TEEN-BOOM/heroku-lavalink/tree/auto)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/KareemRS/heroku-lavalink/tree/auto)
 
 Buildpacks should be added automatically, you may modify the `PASS` variable during setup to change the password.
 
