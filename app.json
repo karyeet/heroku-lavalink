@@ -1,0 +1,29 @@
+{
+    "name": "heroku-lavalink",
+    "description": "lavalink server",
+    "keywords":[
+        "lavalink",
+        "wavelink",
+        "discord.py",
+        "discord.js"
+    ],
+    "repository": "https://github.com/KareemRS/heroku-lavalink.git",
+    "env": {
+        "PASS": {
+            "description": "The password change this to whatever you want it to be.",
+            "value": "youshallnotpass"
+        },
+        "JAVA_TOOL_OPTIONS": {
+            "description": "This sets the ram to max *don't edit* this variable",
+            "value": "-XX:+UseContainerSupport -Xmx500m -Xss256k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8"
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/nodejs"
+        },
+        {
+            "url": "heroku/java"
+        }
+    ]
+}
