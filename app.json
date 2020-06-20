@@ -4,7 +4,8 @@
     "keywords":[
         "lavalink",
         "wavelink",
-        "discord.py"
+        "discord.py",
+        "discord.js"
     ],
     "repository": "https://github.com/KareemRS/heroku-lavalink.git",
     "env": {
