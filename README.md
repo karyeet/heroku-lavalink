@@ -37,4 +37,4 @@ If heroku is unable to automatically configure buildpacks, go to your projects s
 1. After changing PASS you must redeploy or click the More menu and *restart all dynos*.
 2. If heroku is unable to automatically configure buildpacks, go to your projects settings on the heroku website and add java and nodejs.
 
-Please understand your lavalink server ***will run out of memory on a free dyno***. I would recommend upgrading or switching to a lighter alternative. If you do upgrade, you must change -Xmx in the JAVA_TOOL_OPTIONS to your new amount of ram.
+Please understand your lavalink server ***will most likely run out of memory on a free dyno***. I would recommend upgrading or switching to a lighter alternative. If you do upgrade, you must change -Xmx in the JAVA_TOOL_OPTIONS to your new amount of ram.
