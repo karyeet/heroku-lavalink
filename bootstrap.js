@@ -51,5 +51,5 @@ function startLavalink() {
     });
 }
 
-const cdn = 'http://cdn.glitch.com/77b0e0bb-e744-442a-bbbd-03c3fe832534%2FLavalink.jar?v=1602728537697'
+const cdn = 'http://cdn.glitch.com/77b0e0bb-e744-442a-bbbd-03c3fe832534%2FLavalink.jar?v=1604038419772'
 download(cdn, './Lavalink.jar', startLavalink)
