@@ -3,7 +3,7 @@ Easily deploy a lavalink server on heroku.
 This is a very elementary and barebones approach, but reliable nonetheless.
 This branch will automatically download the Lavalink.jar, but it may not be latest.
 
-Current Lavalink release: **v3.3.1.4**
+Current Lavalink release: **v3.3.2.1**
 
 ##### Note:
 You can enable automatic deploys to update the app when commits are added to the auto branch (see step 5 to 9 in Github Deploy).
