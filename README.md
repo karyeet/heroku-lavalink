@@ -6,10 +6,6 @@ This branch will automatically download the latest Lavalink jar file.
 ### *heroku-lavalink will now download the latest Lavalink.jar automatically & directly from GitHub*
 *To update your Lavalink.jar, restart all dynos (faster) or redeploy.*
 
-##### Note:
-You can enable automatic deploys to update the app when commits are added to the auto branch (see step 5 to 9 in Github Deploy).
-Automatic deploys will restart your server so enable them at your own risk, the author is not responsible for any damages that may occur as results of automatic deploys!
-
 ### One Click Deploy:
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/KareemRS/heroku-lavalink/tree/auto)
 
