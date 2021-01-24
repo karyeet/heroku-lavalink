@@ -2,6 +2,12 @@
 const fs = require("fs")
 const fetch = require("node-fetch")
 
+const server = require("http").createServer(function(req,res){
+    res.write(process.uptime())
+    res.end()
+}).listen(process.env.PORT)
+
+
 let application = fs.readFileSync("./application.yml", "utf8")
 
 if (process.env.PORT) {
