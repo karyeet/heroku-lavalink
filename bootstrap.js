@@ -22,6 +22,12 @@ const download = function (url, dest, cb) {
             console.log("Downloaded Lavalink.jar")
             file.close(cb);
         });
+        file.on("error", function(err){
+            console.error("Filestream error while downloading Lavalink: "+err)
+        })
+    })
+    .catch(function(err){
+        console.error("Fetch error while downloading Lavalink: "+err)
     })
 };
 
@@ -56,6 +62,9 @@ fetch("https://api.github.com/repos/Frederikam/Lavalink/releases/latest")
     .then(json => {
         console.log("Found: "+json.assets[0].browser_download_url)
         download(json.assets[0].browser_download_url, "./Lavalink.jar", startLavalink)
+    })
+    .catch(err =>{
+        console.error("Error occured when fetching latest release url: "+err)
     });
 
 
