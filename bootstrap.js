@@ -57,11 +57,26 @@ function startLavalink() {
 
 
 console.log("Fetching latest Lavalink.jar url...")
-fetch("https://api.github.com/repos/Frederikam/Lavalink/releases/latest")
+fetch("https://api.github.com/repos/freyacodes/Lavalink/releases/latest")
     .then(res => res.json())
     .then(json => {
-        console.log("Found: "+json.assets[0].browser_download_url)
-        download(json.assets[0].browser_download_url, "./Lavalink.jar", startLavalink)
+        if(json.assets[0] && json.assets[0].browser_download_url){
+            console.log("Found: "+json.assets[0].browser_download_url)
+            download(json.assets[0].browser_download_url, "./Lavalink.jar", startLavalink)
+        }else{
+            console.warn("Could not find .jar for latest release!")
+            console.warn("Attempting to download previous release...")
+            
+            let priorVersion = json["tag_name"].split(".")
+            priorVersion[priorVersion.length-1] = Number(priorVersion[priorVersion.length-1])-1
+            priorVersion[0] = priorVersion[0].replace("v","")
+            priorVersion = priorVersion.join(".")
+
+            let priorDL_URL = `https://github.com/freyacodes/Lavalink/releases/download/${priorVersion}/Lavalink.jar`
+            console.log("Found: "+priorDL_URL)
+            download(priorDL_URL, "./Lavalink.jar", startLavalink)
+        }
+
     })
     .catch(err =>{
         console.error("Error occured when fetching latest release url: "+err)
