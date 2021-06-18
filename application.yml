@@ -1,5 +1,5 @@
 server: # REST and WS server
-  port: DYNAMICPORT
+  port: 32
   address: 0.0.0.0
 lavalink:
   server:
