@@ -1,5 +1,5 @@
 server: # REST and WS server
-  port: DYNAMICPORT
+  port: DYNAMICPORT  # DO NOT CHANGE ME; YOUR SERVER WILL NOT WORK IF CHANGED.
   address: 0.0.0.0
 lavalink:
   server:
