@@ -32,7 +32,7 @@ const download = function (url, dest, cb) {
 };
 
 function startLavalink() {
-    import {spawn} from 'child_process';
+    import spawn from 'child_process';
     const child = spawn("java", ["-jar", "Lavalink.jar"],{"stdio":"inherit"})
 
     child.on("error", (error) => {
