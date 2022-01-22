@@ -1,6 +1,6 @@
 
 const fs = require("fs")
-const fetch = require("node-fetch")
+import fetch from 'node-fetch';
 
 let application = fs.readFileSync("./application.yml", "utf8")
 
