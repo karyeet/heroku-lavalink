@@ -1,5 +1,5 @@
 
-const fs = require("fs")
+import * as fs from 'fs';
 import fetch from 'node-fetch';
 
 let application = fs.readFileSync("./application.yml", "utf8")
@@ -32,7 +32,7 @@ const download = function (url, dest, cb) {
 };
 
 function startLavalink() {
-    const spawn = require("child_process").spawn;
+    import {spawn} from 'child_process';
     const child = spawn("java", ["-jar", "Lavalink.jar"],{"stdio":"inherit"})
 
     child.on("error", (error) => {
