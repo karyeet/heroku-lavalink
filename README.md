@@ -7,7 +7,7 @@ This branch will automatically download the latest Lavalink jar file.
 *To update your Lavalink.jar, restart all dynos (faster) or redeploy.*
 
 ### One Click Deploy:
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/KareemRS/heroku-lavalink/tree/auto)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/KareemRS/heroku-lavalink/tree/auto) <-- Click me!
 
 Buildpacks should be added automatically, you may modify the `PASS` variable during setup to change the password.
 
