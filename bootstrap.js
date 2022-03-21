@@ -32,6 +32,7 @@ const download = function (url, dest, cb) {
 };
 
 function keepAlive(APP_NAME){
+    console.log("heroku-lavalink: running keepAlive")
     fetch(`https://${APP_NAME}.herokuapp.com/`).catch((err)=>{
         
         console.log("Error while running keepAlive: "+ err)
