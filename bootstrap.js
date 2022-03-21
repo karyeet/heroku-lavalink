@@ -46,7 +46,7 @@ function startLavalink() {
         setInterval(keepAlive, 20*60*1000, process.env.APP_NAME);
     }else{
         console.log("I will not visit myself every 20 minutes, APP_NAME is not specified!")
-        console.log("If this is a free dyno, Heroku will make this project sleep after 30 minutes unless there is http activity.")
+        console.log("If you are using the free tier, Heroku will make this project sleep after 30 minutes unless there is http activity.")
     }
 
     const spawn = require("child_process").spawn;
