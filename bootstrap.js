@@ -31,8 +31,9 @@ const download = function (url, dest, cb) {
     })
 };
 
-function keepAlive(url){
-    fetch(url).catch((err)=>{
+function keepAlive(APP_NAME){
+    fetch(`https://${APP_NAME}.herokuapp.com/`).catch((err)=>{
+        
         console.log("Error while running keepAlive: "+ err)
     })
 }
