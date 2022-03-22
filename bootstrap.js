@@ -31,7 +31,25 @@ const download = function (url, dest, cb) {
     })
 };
 
+function keepAlive(APP_NAME){
+    console.log("heroku-lavalink: running keepAlive")
+    fetch(`https://${APP_NAME}.herokuapp.com/`).catch((err)=>{
+        
+        console.log("Error while running keepAlive: "+ err)
+    })
+}
+
 function startLavalink() {
+
+    console.log("Checking if APP_NAME is specified...")
+    if(process.env.APP_NAME){
+        console.log("I will visit myself every 20 minutes because APP_NAME specified!");
+        setInterval(keepAlive, 20*60*1000, process.env.APP_NAME);
+    }else{
+        console.log("I will not visit myself every 20 minutes, APP_NAME is not specified!")
+        console.log("If you are using the free tier, Heroku will make this project sleep after 30 minutes unless there is http activity.")
+    }
+
     const spawn = require("child_process").spawn;
     const child = spawn("java", ["-jar", "Lavalink.jar"],{"stdio":"inherit"})
 
@@ -42,6 +60,7 @@ function startLavalink() {
     child.on("close", (code) => {
         console.log(`Lavalink exited with code ${code}`);
     });
+
 }
 
 

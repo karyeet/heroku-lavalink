@@ -13,10 +13,16 @@
             "description": "The password you will use to authenticate http requests. Change this to whatever you want it to be.",
             "value": "youshallnotpass"
         },
+        "APP_NAME": {
+            "description": "Set this to your heroku application's name. This will allow the project to visit itself and prevent it from sleeping.",
+            "value": "",
+            "required": false
+        },
         "JAVA_TOOL_OPTIONS": {
             "description": "This sets the ram to max. *Don't edit* this variable unless you know what you're doing.",
             "value": "-XX:+UseContainerSupport -Xmx500m -Xss256k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8"
         }
+
     },
     "buildpacks": [
         {
