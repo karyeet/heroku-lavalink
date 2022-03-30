@@ -1,9 +1,9 @@
 server: # REST and WS server
-  port: DYNAMICPORT
+  port: DYNAMICPORT  # DO NOT CHANGE ME; YOUR SERVER WILL NOT WORK IF CHANGED.
   address: 0.0.0.0
 lavalink:
   server:
-    password: "youshallnotpass"
+    password: "youshallnotpass" # DO NOT CHANGE ME; SET PASSWORD IN HEROKU "CONFIG VARS" MENU
     sources:
       youtube: true
       bandcamp: true
