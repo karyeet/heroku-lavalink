@@ -10,7 +10,7 @@ This branch will automatically download the latest Lavalink jar file.
 *set APP_NAME in config vars to your heroku application's name to enable, you only need this for the free tier*
 
 ## One Click Deploy:
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/karyeet/hlvlink-decoy) <-- Click me!
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/karyeet/hlvlink-decoy/tree/auto) <-- Click me!
 
 Buildpacks should be added automatically, you may modify the `PASS` variable during setup to change the password.
 
