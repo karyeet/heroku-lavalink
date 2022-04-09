@@ -18,7 +18,7 @@ Buildpacks should be added automatically, you may modify the `PASS` variable dur
 1. Create a fork of this repo
 2. Navigate to your heroku project @dashboard.heroku.com
 3. Navigate to your project *"Settings"*, click *"Reaveal Config Vars"*, and create a new var called *PASS* and set it to what you want your lavalink password to be.
-4. In the same menu, create a new var called JAVA_TOOL_OPTIONS and set it to "-XX:+UseContainerSupport -Xmx500m -Xss256k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8" without the "" , this will set ram to max on a free dyno
+4. In the same menu, create a new var called JAVA_TOOL_OPTIONS and set it to `-Xmx400m -Xms400m -XX:MaxPermSize=48m`, these are settings I recommend for a free dyno.
 5. In the same menu, create a var called APP_NAME and set it to your heroku applications name.
 6. Navigate to the *"Deploy"* tab
 7. Find/Click the *"Connect to GitHub"* section and login if needed
@@ -32,7 +32,7 @@ Buildpacks should be added automatically, you may modify the `PASS` variable dur
 3. Follow https://devcenter.heroku.com/articles/git.
 If heroku is unable to automatically configure buildpacks, go to your projects settings on the heroku website and add java and nodejs.
 4. Go to your project settings->config vars on heroku and set a new var called PASS to what you want your lavalink password to be.
-5. In the same menu, set a new var called JAVA_TOOL_OPTIONS and set it to "-XX:+UseContainerSupport -Xmx500m -Xss256k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8" without the "" , this will set ram to max on a free dyno
+5. In the same menu, set a new var called JAVA_TOOL_OPTIONS and set it to `-Xmx400m -Xms400m -XX:MaxPermSize=48m`, these are settings I recommend for a free dyno.
 6. In the same menu, create a var called APP_NAME and set it to your heroku applications name.
 ##
 **Notes:** 
