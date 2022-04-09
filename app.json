@@ -20,7 +20,7 @@
         },
         "JAVA_TOOL_OPTIONS": {
             "description": "This sets the ram to max. *Don't edit* this variable unless you know what you're doing.",
-            "value": "-XX:+UseContainerSupport -Xmx500m -Xss256k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8"
+            "value": "-Xmx400m -Xms400m -XX:MaxPermSize=48m"
         }
 
     },
