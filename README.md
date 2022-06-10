@@ -9,6 +9,10 @@ This branch will automatically download the latest Lavalink jar file.
 * ### *heroku-lavalink can now visit itself every 20 minutes (instead of uptimerobot)*
 *set APP_NAME in config vars to your heroku application's name to enable, you only need this for the free tier*
 
+Your lavalink server will be available over port 80 and 443(HTTPS/SSL) at your heroku app website (APP_NAME.herokuapp.com)
+
+I will not provide support in issues for external libraries.
+
 ## One Click Deploy:
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/karyeet/hlvlink-decoy/tree/auto) <-- Click me!
 
