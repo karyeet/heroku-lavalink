@@ -7,6 +7,8 @@ assignees: ''
 
 ---
 
+I will not answer issues regarding external libraries or questions like "how to setup with x library", those questions are for that libraries developer to answer.
+
 **Describe the bug**
 A clear and concise description of what the bug is.
 
