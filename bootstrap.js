@@ -65,7 +65,7 @@ function startLavalink() {
 
 
 console.log("Fetching latest Lavalink.jar url...")
-fetch("https://api.github.com/repos/freyacodes/Lavalink/releases/latest")
+fetch("https://api.github.com/repos/Cog-Creators/Lavalink-Jars/releases/latest")
     .then(res => res.json())
     .then(json => {
         if(json.assets[0] && json.assets[0].browser_download_url){
@@ -80,7 +80,7 @@ fetch("https://api.github.com/repos/freyacodes/Lavalink/releases/latest")
             priorVersion[0] = priorVersion[0].replace("v","")
             priorVersion = priorVersion.join(".")
 
-            let priorDL_URL = `https://github.com/freyacodes/Lavalink/releases/download/${priorVersion}/Lavalink.jar`
+            let priorDL_URL = `https://github.com/Cog-Creators/Lavalink-Jars/releases/download/${priorVersion}/Lavalink.jar`
             console.log("Found: "+priorDL_URL)
             download(priorDL_URL, "./Lavalink.jar", startLavalink)
         }
