@@ -18,6 +18,16 @@
             "value": "",
             "required": false
         },
+        "PRERELEASES": {
+            "description": "Whether to download lavalink prereleases.",
+            "value": true,
+            "required": false
+        },
+        "GITHUB_REPO": {
+            "description": "The github repo to fetch releases from.",
+            "value": "freyacodes/Lavalink",
+            "required": false
+        },
         "JAVA_TOOL_OPTIONS": {
             "description": "This sets the ram to max. *Don't edit* this variable unless you know what you're doing.",
             "value": "-Xmx400m -Xms400m -XX:MaxPermSize=48m"
