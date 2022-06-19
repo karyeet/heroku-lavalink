@@ -20,7 +20,7 @@
         },
         "PRERELEASES": {
             "description": "Whether to download lavalink prereleases.",
-            "value": true,
+            "value": "true",
             "required": false
         },
         "GITHUB_REPO": {
