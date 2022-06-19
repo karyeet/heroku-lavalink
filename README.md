@@ -13,6 +13,14 @@ Your lavalink server will be available over port 80 and 443(HTTPS/SSL) at your h
 
 I will not provide support in issues for external libraries.
 
+| Config Var  | Description | Default |
+| ------------- | ------------- | ------------- |
+| PASS  | The password you will use to authenticate http requests. Change this to whatever you want it to be.  | youshallnotpass|
+| APP_NAME  | Set this to your heroku application's name. This will allow the project to visit itself and prevent it from sleeping.  | blank |
+| PRERELEASES  | Whether to download lavalink prereleases.  | false |
+| GITHUB_REPO  | The github repo to fetch releases from. | freyacodes/Lavalink |
+| JAVA_TOOL_OPTIONS  | This sets the ram to max. *Don't edit* this variable unless you know what you're doing. | -Xmx400m -Xms400m -XX:MaxPermSize=48m |
+
 ## One Click Deploy:
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/karyeet/hlvlink-decoy/tree/auto) <-- Click me!
 
