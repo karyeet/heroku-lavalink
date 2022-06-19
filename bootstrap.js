@@ -2,6 +2,10 @@
 const fs = require("fs")
 const fetch = require("node-fetch")
 
+const APP_NAME = process.env.APP_NAME || false;
+const INCLUDE_PRERELEASES =  process.env.PRERELEASES || false;
+const GITHUB_REPO = process.env.GITHUB_REPO || "freyacodes/Lavalink";
+
 let application = fs.readFileSync("./application.yml", "utf8")
 
 if (process.env.PORT) {
@@ -31,7 +35,7 @@ const download = function (url, dest, cb) {
     })
 };
 
-function keepAlive(APP_NAME){
+function keepAlive(){
     console.log("heroku-lavalink: running keepAlive")
     fetch(`https://${APP_NAME}.herokuapp.com/`).catch((err)=>{
         
@@ -42,9 +46,9 @@ function keepAlive(APP_NAME){
 function startLavalink() {
 
     console.log("Checking if APP_NAME is specified...")
-    if(process.env.APP_NAME){
+    if(APP_NAME){
         console.log("I will visit myself every 20 minutes because APP_NAME specified!");
-        setInterval(keepAlive, 20*60*1000, process.env.APP_NAME);
+        setInterval(keepAlive, 20*60*1000);
     }else{
         console.log("I will not visit myself every 20 minutes, APP_NAME is not specified!")
         console.log("If you are using the free tier, Heroku will make this project sleep after 30 minutes unless there is http activity.")
@@ -65,24 +69,22 @@ function startLavalink() {
 
 
 console.log("Fetching latest Lavalink.jar url...")
-fetch("https://api.github.com/repos/freyacodes/Lavalink/releases/latest")
+fetch("https://api.github.com/repos/"+GITHUB_REPO+"/releases")
     .then(res => res.json())
     .then(json => {
-        if(json.assets[0] && json.assets[0].browser_download_url){
-            console.log("Found: "+json.assets[0].browser_download_url)
-            download(json.assets[0].browser_download_url, "./Lavalink.jar", startLavalink)
-        }else{
-            console.warn("Could not find .jar for latest release!")
-            console.warn("Attempting to download previous release...")
-            
-            let priorVersion = json["tag_name"].split(".")
-            priorVersion[priorVersion.length-1] = Number(priorVersion[priorVersion.length-1])-1
-            priorVersion[0] = priorVersion[0].replace("v","")
-            priorVersion = priorVersion.join(".")
 
-            let priorDL_URL = `https://github.com/freyacodes/Lavalink/releases/download/${priorVersion}/Lavalink.jar`
-            console.log("Found: "+priorDL_URL)
-            download(priorDL_URL, "./Lavalink.jar", startLavalink)
+        for(let i = 0; i < json.length; ++i ){ // (json[i].prerelease && INCLUDE_PRERELEASES)
+            if(json[i].assets[0] && json[i].assets[0].browser_download_url){ //if dl exists
+                if(!json[i].prerelease || INCLUDE_PRERELEASES){ //if not prerelease or if allow prerelease
+                    console.log("Found version" + json[i].tag_name +" attempting to download...")
+                    download(json[i].assets[0].browser_download_url, "./Lavalink.jar", startLavalink)
+                    break;
+                }else{
+                    console.log("Skipping version" + json[i].tag_name + " because it is a prerelease and PRERELEASES is set to false.")
+                }
+            }else{
+                console.log("Skipping version" + json[i].tag_name + " because no download is available.")
+            }
         }
 
     })
