@@ -3,7 +3,7 @@ const fs = require("fs")
 const fetch = require("node-fetch")
 
 const APP_NAME = process.env.APP_NAME || false;
-const INCLUDE_PRERELEASES =  process.env.PRERELEASES || false;
+const INCLUDE_PRERELEASES =  process.env.PRERELEASES === "true";
 const GITHUB_REPO = process.env.GITHUB_REPO || "freyacodes/Lavalink";
 
 let application = fs.readFileSync("./application.yml", "utf8")
