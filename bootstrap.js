@@ -76,14 +76,14 @@ fetch("https://api.github.com/repos/"+GITHUB_REPO+"/releases")
         for(let i = 0; i < json.length; ++i ){ // (json[i].prerelease && INCLUDE_PRERELEASES)
             if(json[i].assets[0] && json[i].assets[0].browser_download_url){ //if dl exists
                 if(!json[i].prerelease || INCLUDE_PRERELEASES){ //if not prerelease or if allow prerelease
-                    console.log("Found version" + json[i].tag_name +" attempting to download...")
+                    console.log("Found version " + json[i].tag_name +" attempting to download...")
                     download(json[i].assets[0].browser_download_url, "./Lavalink.jar", startLavalink)
                     break;
                 }else{
-                    console.log("Skipping version" + json[i].tag_name + " because it is a prerelease and PRERELEASES is set to false.")
+                    console.log("Skipping version " + json[i].tag_name + " because it is a prerelease and PRERELEASES is set to false.")
                 }
             }else{
-                console.log("Skipping version" + json[i].tag_name + " because no download is available.")
+                console.log("Skipping version " + json[i].tag_name + " because no download is available.")
             }
         }
 
